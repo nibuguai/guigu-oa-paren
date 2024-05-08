@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service-oa
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy年MM月dd日HH点mm
+  mvc:
+    format:
+      date-time: "yyyy-MM-dd HH:mm:ss"
+mybatis-plus:
+  typeAliasesPackage: com.atguigu.model.system #没有这句，arameterType="Dept"就得写成parameterType="com.jjj.springcloud.pojo.Dept"
+  mapper-locations:
+    - classpath*:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 查看日志
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+      field-strategy: not_empty
+      insert-fill: true
+      update-fill: true

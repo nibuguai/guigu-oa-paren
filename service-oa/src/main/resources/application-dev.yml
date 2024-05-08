@@ -1,0 +1,11 @@
+server:
+  port: 8800
+  servlet:
+    context-path: /dev-api
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.111.3:3306/learning?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
